@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SS14 Resources</title>
+  <meta name="description" content="Wikis, guides, tools and community links for Space Station 14, sorted by server, with live player counts.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <div class="wrap">
+      <h1>SS14 Resources</h1>
+      <p class="lede">Wikis, guides, tools and community links for Space Station 14, sorted by server.</p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section id="featured" class="featured" aria-label="Featured tool"></section>
+
+    <section aria-labelledby="general-h">
+      <h2 id="general-h">For every server</h2>
+      <div id="general" class="general"></div>
+    </section>
+
+    <section aria-labelledby="servers-h">
+      <div class="servers-head">
+        <h2 id="servers-h">By server</h2>
+        <p id="hub-status" class="hub-status" aria-live="polite">Loading live player counts…</p>
+      </div>
+      <div class="controls">
+        <input id="search" type="search" placeholder="Search servers, guides, links…" aria-label="Search">
+        <div id="tags" class="tags" role="group" aria-label="Filter by tag"></div>
+        <label class="sort">Sort
+          <select id="sort">
+            <option value="players">Players online</option>
+            <option value="name">Name</option>
+          </select>
+        </label>
+      </div>
+      <div id="servers" class="servers"></div>
+      <p id="empty" class="empty" hidden>No server matches that search.</p>
+    </section>
+
+    <section id="others-wrap" aria-labelledby="others-h" hidden>
+      <h2 id="others-h">Also busy right now</h2>
+      <p class="muted">Servers on the official hub with players online that don't have a card here yet.</p>
+      <ol id="others" class="others"></ol>
+    </section>
+  </main>
+
+  <footer class="wrap foot">
+    <p>Live counts come from the official server hub and refresh every two minutes. Not affiliated with Space Wizards or any server listed.
+      Missing a server or a guide? Edit <code>data.js</code> and open a pull request.</p>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
